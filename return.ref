@@ -1,0 +1,22 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v272",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "退貨": {
+            "id": "cb72be63-4aee-406d-bbaa-c0c2524be0e6",
+            "pos": "<ACTION_verb>退貨</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退貨|退下|退出|退回|退守|退票|退行|退還|回來|回去|回敬)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退貨|退換貨)</(ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

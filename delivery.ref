@@ -1,0 +1,37 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v272",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "哪家快遞": {
+            "id": "f0a76ea4-8d25-47ed-9872-3ff5a126b4bd",
+            "pos": "<CLAUSE_WhatQ>哪家</CLAUSE_WhatQ><ENTITY_noun>快遞</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "(<ENTITY_DetPhrase>哪一家</ENTITY_DetPhrase>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>(配送|寄送|配送|郵寄)</(ACTION_verb|VerbP)>)"
+        },
+        "用什麼送": {
+            "id": "97e55be8-e253-445c-bccd-0d329576d895",
+            "pos": "<ACTION_verb>用</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>送</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|有用|指用)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送|轉送|分送|迫逃|送給|贈送|搬|送到|送去|送了|經送)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>送</(ACTION_verb|VerbP)>"
+        },
+        "怎麼送到香港": {
+            "id": "0b8b029d-594d-4460-a5b7-7e12489ea086",
+            "pos": "<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

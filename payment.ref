@@ -1,0 +1,38 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v272",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "付款方式": {
+            "id": "ead36022-249a-4a26-88f0-a76eb84af2d5",
+            "pos": "<ACTION_verb>付款</ACTION_verb><ENTITY_noun>方式</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>方式</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "有ApplePay嗎": {
+            "id": "bb632940-7300-4108-a8dd-7020f572c10d",
+            "pos": "<ACTION_verb>有</ACTION_verb><ENTITY_oov>ApplePay</ENTITY_oov><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)|((<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(使用|拿|用)</(ACTION_verb|VerbP)>))<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "付款方式ApplePay": {
+            "id": "a04c46ee-86dd-4480-b9c8-8abc8408b445",
+            "pos": "<ACTION_verb>付款</ACTION_verb><ENTITY_noun>方式</ENTITY_noun><ENTITY_oov>ApplePay</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>付款</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>方式</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(.+)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

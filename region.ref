@@ -1,0 +1,22 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v272",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "可以送到香港": {
+            "id": "704b38df-1573-4196-9ae8-cf299b73970e",
+            "pos": "<MODAL>可以</MODAL><ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送到|送去|運送到|送至|運到)</(ACTION_verb|VerbP)>(<LOCATION>([^<]+)</LOCATION>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

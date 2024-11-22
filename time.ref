@@ -1,0 +1,40 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v272",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "utterance": {
+        "要等多久": {
+            "id": "746539cd-73e4-4732-9a03-b2a26bdf91ee",
+            "pos": "<ACTION_verb>要</ACTION_verb><ACTION_verb>等</ACTION_verb><CLAUSE_HowQ>多</CLAUSE_HowQ><MODIFIER>久</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(等|久等|稍等|等候|等到|等待|等第|等級|候補|安排|待遇)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>等</(ACTION_verb|VerbP)><CLAUSE_HowQ>多</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>)?"
+        },
+        "多久能送到": {
+            "id": "a0af83dc-7cc6-45e6-a9ae-7f581c049528",
+            "pos": "<CLAUSE_HowQ>多</CLAUSE_HowQ><MODIFIER>久</MODIFIER><MODAL>能</MODAL><ACTION_verb>送到</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>(<MODAL>[^<]+</MODAL>|(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>辦法</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<LOCATION>[^<]+</LOCATION>)?"
+        },
+        "送到香港要多久": {
+            "id": "ee01ea37-2ee9-424c-a7ef-ea5ee86bd497",
+            "pos": "<ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION><ACTION_verb>要</ACTION_verb><CLAUSE_HowQ>多</CLAUSE_HowQ><MODIFIER>久</MODIFIER>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?|<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>)?"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
