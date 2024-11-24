@@ -29,6 +29,15 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
             "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        },
+        "怎麼查看出貨狀態": {
+            "id": "9ebe248d-1851-4a39-8b38-9d1672db5cce",
+            "pos": "<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>查看</ACTION_verb><ACTION_verb>出貨</ACTION_verb><ENTITY_noun>狀態</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查看|探查|查找|查探|查明|查檢|查究|查考|查詢|查閱|檢查)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出貨|裝運|轉運|運出|供貨|生產|量產|封裝|放量|試產|銷售)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(查看|查詢)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>出貨</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>狀態</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         }
     },
     "alias": {},

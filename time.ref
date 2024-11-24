@@ -22,7 +22,15 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>(<MODAL>[^<]+</MODAL>|(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>辦法</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<LOCATION>[^<]+</LOCATION>)?"
+            "pattern": "<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>(<MODAL>[^<]+</MODAL>|(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>辦法</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>(<LOCATION>[^<]+</LOCATION>)?"
+        },
+        "甚麼時候會到貨": {
+            "id": "7dfc3dfb-cc53-408c-a43d-d9a64fd3ca56",
+            "pos": "<CLAUSE_WhenQ>甚麼</CLAUSE_WhenQ><ENTITY_oov>時候</ENTITY_oov><MODAL>會</MODAL><ACTION_verb>到貨</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到貨|開賣|交貨|進貨|賣完|售完|送完|售罄|開市|開售|配送)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_WhenQ>[^<]+</CLAUSE_WhenQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>時候</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(到貨|到|送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>"
         },
         "送到香港要多久": {
             "id": "ee01ea37-2ee9-424c-a7ef-ea5ee86bd497",
@@ -32,6 +40,15 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>"
             ],
             "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?|<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>)?"
+        },
+        "下單後多久會出貨": {
+            "id": "c0ddef89-e91d-4dd1-89a5-2540a6d240df",
+            "pos": "<ACTION_verb>下單</ACTION_verb><RANGE_period>後</RANGE_period><CLAUSE_HowQ>多</CLAUSE_HowQ><MODIFIER>久</MODIFIER><MODAL>會</MODAL><ACTION_verb>出貨</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(下單|下令|勒令|命令|責令|迫令|結帳|成交|開賣|預售|付款)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出貨|裝運|轉運|運出|供貨|生產|量產|封裝|放量|試產|銷售)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(下單|下訂)</(ACTION_verb|VerbP)><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(出貨|到貨|到|送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},

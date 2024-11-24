@@ -7,6 +7,12 @@
     },
     "user_defined": {},
     "utterance": {
+        "換貨": {
+            "id": "ff0ce853-5a06-425d-84e4-a1102c8d6cc1",
+            "pos": "<ENTITY_nouny>換貨</ENTITY_nouny>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>換貨</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
         "退貨": {
             "id": "cb72be63-4aee-406d-bbaa-c0c2524be0e6",
             "pos": "<ACTION_verb>退貨</ACTION_verb>",

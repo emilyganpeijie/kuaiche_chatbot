@@ -5,13 +5,29 @@
         "atk": "v272",
         "intent": "1.0"
     },
-    "user_defined": {},
+    "user_defined": {
+        "as_Noun": [
+            "關稅"
+        ]
+    },
     "utterance": {
-        "稅": {
-            "id": "3a082726-34ca-473a-82c9-4f59a82ddfc0",
-            "pos": "<ENTITY_oov>稅</ENTITY_oov>",
-            "lexy": [],
-            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(稅<)/(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        "關稅要繳多少": {
+            "id": "2bff0602-4414-40cc-a175-20eb4e27d3bf",
+            "pos": "<UserDefined>關稅</UserDefined><ACTION_verb>要</ACTION_verb><ACTION_verb>繳</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(繳|繳納|繳交|交納|繳清|繳稅|繳付|繳了|補繳|欠繳|繳回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(關稅|稅)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>繳</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        },
+        "要支付多少關稅": {
+            "id": "123319c2-4cbc-42aa-99ca-38f8a0897cea",
+            "pos": "<ACTION_verb>要</ACTION_verb><ACTION_verb>支付</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><UserDefined>關稅</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(支付|繳)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(關稅|稅)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         }
     },
     "alias": {},
