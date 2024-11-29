@@ -7,27 +7,28 @@
     },
     "user_defined": {
         "as_Noun": [
-            "關稅"
+            "關稅",
+            "快遞",
+            "貨態",
+            "貨物"
         ]
     },
     "utterance": {
-        "關稅要繳多少": {
-            "id": "2bff0602-4414-40cc-a175-20eb4e27d3bf",
-            "pos": "<UserDefined>關稅</UserDefined><ACTION_verb>要</ACTION_verb><ACTION_verb>繳</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ>",
-            "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(繳|繳納|繳交|交納|繳清|繳稅|繳付|繳了|補繳|欠繳|繳回)</(ACTION_verb|VerbP)>"
-            ],
-            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(關稅|稅)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>繳</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>"
+        "關稅": {
+            "id": "6f130a67-44a6-432a-9d70-fc5cb633b4c9",
+            "pos": "<UserDefined>關稅</UserDefined>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>關稅</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
-        "要支付多少關稅": {
-            "id": "123319c2-4cbc-42aa-99ca-38f8a0897cea",
-            "pos": "<ACTION_verb>要</ACTION_verb><ACTION_verb>支付</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><UserDefined>關稅</UserDefined>",
+        "入境要另外付錢嗎": {
+            "id": "42ac0f80-ec07-49c6-bc4e-b49b0568cb30",
+            "pos": "<ACTION_verb>入境</ACTION_verb><ACTION_verb>要</ACTION_verb><MODIFIER>另外</MODIFIER><ACTION_verb>付錢</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
             "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入境|出境|離境|抵港|檢疫|通關|過境|攜入|居留|入籍|登船)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付錢|交錢|付出|付款|付清|付現|付給|付費|付賬|償付|出錢)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(支付|繳)</(ACTION_verb|VerbP)><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(關稅|稅)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>入境</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},

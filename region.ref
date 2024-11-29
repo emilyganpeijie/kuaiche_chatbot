@@ -5,7 +5,14 @@
         "atk": "v272",
         "intent": "1.0"
     },
-    "user_defined": {},
+    "user_defined": {
+        "as_Noun": [
+            "關稅",
+            "快遞",
+            "貨態",
+            "貨物"
+        ]
+    },
     "utterance": {
         "可以送到香港": {
             "id": "704b38df-1573-4196-9ae8-cf299b73970e",
@@ -13,7 +20,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送到|送去|運送到|送至|運到)</(ACTION_verb|VerbP)>(<LOCATION>([^<]+)</LOCATION>)?"
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送到|送去|送達|寄送|寄到|寄達|配送|宅配|運送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?"
         }
     },
     "alias": {},

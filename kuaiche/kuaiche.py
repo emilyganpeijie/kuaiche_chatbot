@@ -301,7 +301,7 @@ def testLoki(inputLIST, filterLIST):
 def testIntent():
     # payment
     print("[TEST] payment")
-    inputLIST = ['付款方式','有ApplePay嗎','付款方式ApplePay']
+    inputLIST = ['付款方式','有ApplePay嗎','可以怎麼付款','付款方式ApplePay']
     testLoki(inputLIST, ['payment'])
     print("")
 
@@ -311,34 +311,34 @@ def testIntent():
     testLoki(inputLIST, ['region'])
     print("")
 
-    # fees
-    print("[TEST] fees")
-    inputLIST = ['運費','送到香港要多少錢']
-    testLoki(inputLIST, ['fees'])
-    print("")
-
-    # delivery
-    print("[TEST] delivery")
-    inputLIST = ['哪家快遞','用什麼送','怎麼送到香港']
-    testLoki(inputLIST, ['delivery'])
-    print("")
-
     # return
     print("[TEST] return")
-    inputLIST = ['退貨']
+    inputLIST = ['換貨','退貨','我不要了']
     testLoki(inputLIST, ['return'])
-    print("")
-
-    # time
-    print("[TEST] time")
-    inputLIST = ['要等多久','多久能送到','送到香港要多久']
-    testLoki(inputLIST, ['time'])
     print("")
 
     # tariff
     print("[TEST] tariff")
-    inputLIST = ['稅']
+    inputLIST = ['關稅','入境要另外付錢嗎']
     testLoki(inputLIST, ['tariff'])
+    print("")
+
+    # time
+    print("[TEST] time")
+    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','到香港大概要等多久','香港大概什麼時候會可以拿到']
+    testLoki(inputLIST, ['time'])
+    print("")
+
+    # delivery
+    print("[TEST] delivery")
+    inputLIST = ['貨態','哪家快遞','用什麼送','怎麼送到香港','哪一家快遞送到香港','怎麼查詢香港的貨態','到香港的怎麼查詢貨態']
+    testLoki(inputLIST, ['delivery'])
+    print("")
+
+    # fees
+    print("[TEST] fees")
+    inputLIST = ['運費','送到香港要多少錢']
+    testLoki(inputLIST, ['fees'])
     print("")
 
 

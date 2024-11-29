@@ -52,7 +52,7 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
     debugInfo(inputSTR, utterance)
-    if utterance == "多久能送到":
+    if utterance == "下單後多久會出貨":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
@@ -61,7 +61,34 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             # resultDICT[key].append(value)
             pass
 
-    if utterance == "要等多久":
+    if utterance == "到香港大概要等多久":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
+    if utterance == "多久會到":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
+    if utterance == "多久能送到香港":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
+    if utterance == "甚麼時候會到貨":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
@@ -71,6 +98,15 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             pass
 
     if utterance == "送到香港要多久":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
+    if utterance == "香港大概什麼時候會可以拿到":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"

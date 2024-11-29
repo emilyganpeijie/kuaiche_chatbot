@@ -70,6 +70,15 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             # resultDICT[key].append(value)
             pass
 
+    if utterance == "可以怎麼付款":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
     if utterance == "有ApplePay嗎":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)

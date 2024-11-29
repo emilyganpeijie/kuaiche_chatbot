@@ -5,13 +5,20 @@
         "atk": "v272",
         "intent": "1.0"
     },
-    "user_defined": {},
+    "user_defined": {
+        "as_Noun": [
+            "關稅",
+            "快遞",
+            "貨態",
+            "貨物"
+        ]
+    },
     "utterance": {
         "換貨": {
             "id": "ff0ce853-5a06-425d-84e4-a1102c8d6cc1",
             "pos": "<ENTITY_nouny>換貨</ENTITY_nouny>",
             "lexy": [],
-            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>換貨</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(換貨)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "退貨": {
             "id": "cb72be63-4aee-406d-bbaa-c0c2524be0e6",
@@ -19,7 +26,15 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退貨|退下|退出|退回|退守|退票|退行|退還|回來|回去|回敬)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退貨|退換貨)</(ACTION_verb|VerbP)>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退|換|退換|退貨|退換貨|退掉|換掉)</(ACTION_verb|VerbP)>"
+        },
+        "我不要了": {
+            "id": "cf59755d-d20c-40b3-af3c-459886c5cc14",
+            "pos": "<ENTITY_pronoun>我</ENTITY_pronoun><FUNC_negation>不</FUNC_negation><VerbP>要了</VerbP>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要了|借了|丟了|拿了|送了|搶了|賣了|怕了|拚了|扔了|交了)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation><(ACTION_verb|VerbP)>(要了|想要了|想要)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},

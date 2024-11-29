@@ -5,7 +5,14 @@
         "atk": "v272",
         "intent": "1.0"
     },
-    "user_defined": {},
+    "user_defined": {
+        "as_Noun": [
+            "關稅",
+            "快遞",
+            "貨態",
+            "貨物"
+        ]
+    },
     "utterance": {
         "付款方式": {
             "id": "ead36022-249a-4a26-88f0-a76eb84af2d5",

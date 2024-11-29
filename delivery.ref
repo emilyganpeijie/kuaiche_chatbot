@@ -5,13 +5,26 @@
         "atk": "v272",
         "intent": "1.0"
     },
-    "user_defined": {},
+    "user_defined": {
+        "as_Noun": [
+            "關稅",
+            "快遞",
+            "貨態",
+            "貨物"
+        ]
+    },
     "utterance": {
+        "貨態": {
+            "id": "4449f8de-64dc-41f1-96c5-26ca0d736a38",
+            "pos": "<UserDefined>貨態</UserDefined>",
+            "lexy": [],
+            "pattern": "((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)*[^<]*(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
+        },
         "哪家快遞": {
             "id": "f0a76ea4-8d25-47ed-9872-3ff5a126b4bd",
             "pos": "<CLAUSE_WhatQ>哪家</CLAUSE_WhatQ><ENTITY_noun>快遞</ENTITY_noun>",
             "lexy": [],
-            "pattern": "(<ENTITY_DetPhrase>哪一家</ENTITY_DetPhrase>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>(配送|寄送|配送|郵寄)</(ACTION_verb|VerbP)>)"
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)>)?(<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<ENTITY_DetPhrase>哪一家</ENTITY_DetPhrase>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>公司</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<(ACTION_verb|VerbP)>(配送|寄送|配送|郵寄)</(ACTION_verb|VerbP)>)"
         },
         "用什麼送": {
             "id": "97e55be8-e253-445c-bccd-0d329576d895",
@@ -20,7 +33,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|有用|指用)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送|轉送|分送|迫逃|送給|贈送|搬|送到|送去|送了|經送)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>送</(ACTION_verb|VerbP)>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>用</(ACTION_verb|VerbP)><CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ><(ACTION_verb|VerbP)>(送)</(ACTION_verb|VerbP)>"
         },
         "怎麼送到香港": {
             "id": "0b8b029d-594d-4460-a5b7-7e12489ea086",
@@ -28,16 +41,32 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?<LOCATION>([^<]+)</LOCATION>"
         },
-        "怎麼查看出貨狀態": {
-            "id": "9ebe248d-1851-4a39-8b38-9d1672db5cce",
-            "pos": "<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>查看</ACTION_verb><ACTION_verb>出貨</ACTION_verb><ENTITY_noun>狀態</ENTITY_noun>",
+        "哪一家快遞送到香港": {
+            "id": "6756c526-bc16-4f4c-99ec-6a758d472a36",
+            "pos": "<ENTITY_DetPhrase>哪一家</ENTITY_DetPhrase><UserDefined>快遞</UserDefined><ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION>",
             "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查看|探查|查找|查探|查明|查檢|查究|查考|查詢|查閱|檢查)</(ACTION_verb|VerbP)>",
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出貨|裝運|轉運|運出|供貨|生產|量產|封裝|放量|試產|銷售)</(ACTION_verb|VerbP)>"
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(查看|查詢)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>出貨</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>狀態</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>公司</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<(ACTION_verb|VerbP)>(配送|寄送|配送|郵寄)</(ACTION_verb|VerbP)>)(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>負責</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送)</(A<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>CTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?"
+        },
+        "怎麼查詢香港的貨態": {
+            "id": "988bd615-cfb9-4dd0-8d1a-cf64530027bf",
+            "pos": "<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>查詢</ACTION_verb><LOCATION>香港</LOCATION><FUNC_inner>的</FUNC_inner><UserDefined>貨態</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查詢|徵詢|探查|探詢|查問|查找|查探|查明|查看|查究|查考)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<LOCATION>[^<]+</LOCATION>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態|貨物|包裹|商品|貨品|肉乾)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>(出貨|寄送|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)"
+        },
+        "到香港的怎麼查詢貨態": {
+            "id": "e4755ac3-87c2-4899-b2b7-b23b7535a257",
+            "pos": "<ACTION_verb>到</ACTION_verb><LOCATION>香港</LOCATION><FUNC_inner>的</FUNC_inner><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>查詢</ACTION_verb><UserDefined>貨態</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查詢|徵詢|探查|探詢|查問|查找|查探|查明|查看|查究|查考)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>|CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>)<(ACTION_verb|VerbP)>(追蹤|查找|查到|查|查詢|知道|確認|確定|看|查看)</(ACTION_verb|VerbP)>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態|貨物|包裹|商品|貨品|肉乾)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>(出貨|寄送|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)"
         }
     },
     "alias": {},
