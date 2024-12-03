@@ -52,15 +52,6 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
     debugInfo(inputSTR, utterance)
-    if utterance == "到香港的怎麼查詢貨態":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-            resultDICT["source"] = "reply"
-        else:
-            # write your code here
-            # resultDICT[key].append(value)
-            pass
-
     if utterance == "哪一家快遞送到香港":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
@@ -106,7 +97,25 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             # resultDICT[key].append(value)
             pass
 
+    if utterance == "美國的怎麼查詢貨態":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
     if utterance == "貨態":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
+    if utterance == "香港的訂單要怎麼查詢配送狀態":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
