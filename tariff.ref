@@ -28,7 +28,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付錢|交錢|付出|付款|付清|付現|付給|付費|付賬|償付|出錢)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>入境</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款)</(ACTION_verb|VerbP)>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款|付費)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},
