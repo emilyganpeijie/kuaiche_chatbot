@@ -7,10 +7,10 @@
     },
     "user_defined": {
         "as_Noun": [
-            "關稅",
             "快遞",
             "貨態",
-            "貨物"
+            "貨物",
+            "關稅"
         ]
     },
     "utterance": {
@@ -41,7 +41,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?<LOCATION>([^<]+)</LOCATION>"
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?<LOCATION>([^<]+)</LOCATION>"
         },
         "哪一家快遞送到香港": {
             "id": "6756c526-bc16-4f4c-99ec-6a758d472a36",
@@ -49,7 +49,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>公司</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<(ACTION_verb|VerbP)>(配送|寄送|配送|郵寄)</(ACTION_verb|VerbP)>)(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>負責</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送)</(A<RANGE_(locality|period)>[^<]+</RANGE_(locality|period)>CTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?"
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>公司</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>負責</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?"
         },
         "怎麼查詢香港的貨態": {
             "id": "988bd615-cfb9-4dd0-8d1a-cf64530027bf",
