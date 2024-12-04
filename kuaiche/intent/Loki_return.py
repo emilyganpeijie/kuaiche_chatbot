@@ -57,8 +57,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["return"] = True
             pass
 
     if utterance == "換貨":
@@ -66,8 +65,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["return"] = True
             pass
 
     if utterance == "退貨":
@@ -75,8 +73,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["return"] = True
             pass
 
     if utterance == "退錢":
@@ -84,8 +81,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["return"] = True
             pass
 
     return resultDICT

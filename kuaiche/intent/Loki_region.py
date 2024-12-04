@@ -57,8 +57,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["region"] = True
+            resultDICT["location"].append(args[9])
             pass
 
     return resultDICT

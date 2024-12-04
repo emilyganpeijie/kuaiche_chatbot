@@ -356,6 +356,7 @@ if __name__ == "__main__":
         "delivery": [],
         "fees": [],
         "payment": [],
+        "pMethod": "",
         "region": [],
         "return": [],
         "tariff": [],
