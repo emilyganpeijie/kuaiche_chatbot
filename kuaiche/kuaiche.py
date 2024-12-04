@@ -311,15 +311,15 @@ def testIntent():
     testLoki(inputLIST, ['region'])
     print("")
 
-    # time
-    print("[TEST] time")
-    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','到香港大概要等多久','香港大概什麼時候會可以拿到']
-    testLoki(inputLIST, ['time'])
+    # tariff
+    print("[TEST] tariff")
+    inputLIST = ['關稅','入境要另外付錢嗎']
+    testLoki(inputLIST, ['tariff'])
     print("")
 
     # payment
     print("[TEST] payment")
-    inputLIST = ['信用卡','付款方式','有ApplePay嗎','支付可以用','可以怎麼付款','ApplePay可以用來付款']
+    inputLIST = ['信用卡','付款方式','有ApplePay嗎','信用卡付款','支付可以用','可以怎麼付款','ApplePay可以用來付款']
     testLoki(inputLIST, ['payment'])
     print("")
 
@@ -335,10 +335,10 @@ def testIntent():
     testLoki(inputLIST, ['return'])
     print("")
 
-    # tariff
-    print("[TEST] tariff")
-    inputLIST = ['關稅','入境要另外付錢嗎']
-    testLoki(inputLIST, ['tariff'])
+    # time
+    print("[TEST] time")
+    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','到香港大概要等多久','香港大概什麼時候會可以拿到']
+    testLoki(inputLIST, ['time'])
     print("")
 
 
