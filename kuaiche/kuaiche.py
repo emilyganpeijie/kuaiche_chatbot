@@ -299,30 +299,6 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
-    # region
-    print("[TEST] region")
-    inputLIST = ['可以送到香港']
-    testLoki(inputLIST, ['region'])
-    print("")
-
-    # fees
-    print("[TEST] fees")
-    inputLIST = ['運費','送到香港要多少錢']
-    testLoki(inputLIST, ['fees'])
-    print("")
-
-    # return
-    print("[TEST] return")
-    inputLIST = ['換貨','退貨','退錢','不想要這個肉乾了']
-    testLoki(inputLIST, ['return'])
-    print("")
-
-    # tariff
-    print("[TEST] tariff")
-    inputLIST = ['關稅','入境要另外付錢嗎']
-    testLoki(inputLIST, ['tariff'])
-    print("")
-
     # payment
     print("[TEST] payment")
     inputLIST = ['信用卡','付款方式','有ApplePay嗎','支付可以用','可以怎麼付款','ApplePay可以用來付款']
