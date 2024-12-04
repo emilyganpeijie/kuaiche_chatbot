@@ -323,12 +323,6 @@ def testIntent():
     testLoki(inputLIST, ['fees'])
     print("")
 
-    # payment
-    print("[TEST] payment")
-    inputLIST = ['付款方式','有ApplePay嗎','可以怎麼付款','付款方式ApplePay']
-    testLoki(inputLIST, ['payment'])
-    print("")
-
     # return
     print("[TEST] return")
     inputLIST = ['換貨','退貨','退錢','不想要這個肉乾了']
@@ -339,6 +333,12 @@ def testIntent():
     print("[TEST] tariff")
     inputLIST = ['關稅','入境要另外付錢嗎']
     testLoki(inputLIST, ['tariff'])
+    print("")
+
+    # payment
+    print("[TEST] payment")
+    inputLIST = ['信用卡','付款方式','有ApplePay嗎','支付可以用','可以怎麼付款','ApplePay可以用來付款']
+    testLoki(inputLIST, ['payment'])
     print("")
 
 
