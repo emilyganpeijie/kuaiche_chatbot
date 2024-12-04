@@ -10,17 +10,25 @@
             "快遞",
             "貨態",
             "貨物",
-            "關稅"
+            "關稅",
+            "支付寶",
+            "台灣Pay"
         ]
     },
     "utterance": {
+        "信用卡": {
+            "id": "113c87fc-efee-45c6-9a39-b5a74fb3fdce",
+            "pos": "<ENTITY_noun>信用卡</ENTITY_noun>",
+            "lexy": [],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>信用卡</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
         "付款方式": {
             "id": "ead36022-249a-4a26-88f0-a76eb84af2d5",
             "pos": "<ACTION_verb>付款</ACTION_verb><ENTITY_noun>方式</ENTITY_noun>",
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>方式</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>方式</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "有ApplePay嗎": {
             "id": "bb632940-7300-4108-a8dd-7020f572c10d",
@@ -28,7 +36,16 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(((?<!</FUNC_negation>)<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)|((<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(使用|拿|用)</(ACTION_verb|VerbP)>))<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>|((<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>(使用|拿|用)</(ACTION_verb|VerbP)>)?))<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "支付可以用": {
+            "id": "f4599d20-db67-4675-9d16-113f0e248885",
+            "pos": "<ACTION_verb>支付</ACTION_verb><MODAL>可以</MODAL><ACTION_verb>用</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用|使用|利用|採用|施用|活用|運用|假借|憑靠|中用|常用)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)>(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(使用|用)</(ACTION_verb|VerbP)>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>([^<]+)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
         },
         "可以怎麼付款": {
             "id": "77a4c59b-c45b-4d10-8a79-fe5318a2da49",
@@ -38,13 +55,14 @@
             ],
             "pattern": "(<MODAL>[^<]+</MODAL>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)>"
         },
-        "付款方式ApplePay": {
-            "id": "a04c46ee-86dd-4480-b9c8-8abc8408b445",
-            "pos": "<ACTION_verb>付款</ACTION_verb><ENTITY_noun>方式</ENTITY_noun><ENTITY_oov>ApplePay</ENTITY_oov>",
+        "ApplePay可以用來付款": {
+            "id": "54865c79-88bc-499e-a2fa-e7f691fa7914",
+            "pos": "<ENTITY_oov>ApplePay</ENTITY_oov><MODAL>可以</MODAL><ACTION_verb>用來</ACTION_verb><ACTION_verb>付款</ACTION_verb>",
             "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(用來|用|拿來|利用|為了|指用|使用|藉由|藉此|有用|當作)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>付款</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>方式</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(.+)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>([^<]+)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(AUX>[^<]+</AUX>)?(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>用來</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},
