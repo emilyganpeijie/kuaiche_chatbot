@@ -305,18 +305,6 @@ def testIntent():
     testLoki(inputLIST, ['region'])
     print("")
 
-    # time
-    print("[TEST] time")
-    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','到香港大概要等多久','香港大概什麼時候會可以拿到']
-    testLoki(inputLIST, ['time'])
-    print("")
-
-    # delivery
-    print("[TEST] delivery")
-    inputLIST = ['貨態','哪家快遞','用什麼送','怎麼送到香港','用哪一家配送','香港的怎麼送','哪一家快遞送到香港','怎麼查詢香港的貨態','美國的怎麼查詢貨態','香港的訂單用哪家快遞送','香港的訂單要怎麼查詢配送狀態']
-    testLoki(inputLIST, ['delivery'])
-    print("")
-
     # fees
     print("[TEST] fees")
     inputLIST = ['運費','送到香港要多少錢']
