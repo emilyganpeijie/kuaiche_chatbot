@@ -27,7 +27,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多少</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>錢</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>付</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多少</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>錢</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
         }
     },
     "alias": {},

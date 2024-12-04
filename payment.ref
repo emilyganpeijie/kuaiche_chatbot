@@ -7,12 +7,12 @@
     },
     "user_defined": {
         "as_Noun": [
+            "台灣Pay",
             "快遞",
+            "支付寶",
             "貨態",
             "貨物",
-            "關稅",
-            "支付寶",
-            "台灣Pay"
+            "關稅"
         ]
     },
     "utterance": {
@@ -53,7 +53,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<MODAL>[^<]+</MODAL>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)>"
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(ApplePay|GooglePay|信用卡|SamsungPay|LinePay|支付寶|台灣Pay|街口)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><(ACTION_verb|VerbP)>(付款|付費|付錢|支付)</(ACTION_verb|VerbP)>"
         },
         "ApplePay可以用來付款": {
             "id": "54865c79-88bc-499e-a2fa-e7f691fa7914",

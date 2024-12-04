@@ -42,7 +42,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想要|想拿|想買|需要|希望|試圖|想讓|願意|打算|試著|想)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>(想要)</(ACTION_verb|VerbP)>)?<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ASPECT>[^<]+</ASPECT>)?"
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>(想要)</(ACTION_verb|VerbP)>)?(<ENTITY_DetPhrase>這個</ENTITY_DetPhrase>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ASPECT>[^<]+</ASPECT>)?"
         }
     },
     "alias": {},
