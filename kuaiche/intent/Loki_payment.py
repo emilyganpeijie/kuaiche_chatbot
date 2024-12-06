@@ -57,8 +57,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
-            resultDICT["pMethod"].append(args[2])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "付款方式":
@@ -66,7 +66,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "信用卡":
@@ -74,8 +75,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
-            resultDICT["pMethod"].append(args[2])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "信用卡付款":
@@ -83,8 +84,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
-            resultDICT["pMethod"].append(args[2])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "可以怎麼付款":
@@ -92,7 +93,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "支付可以用":
@@ -100,7 +102,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "有ApplePay嗎":
@@ -108,8 +111,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["payment"] = True
-            resultDICT["pMethod"].append(args[15])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     return resultDICT

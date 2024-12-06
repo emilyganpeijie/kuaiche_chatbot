@@ -52,13 +52,22 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
     debugInfo(inputSTR, utterance)
+    if utterance == "寄到香港的費用":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            # write your code here
+            # resultDICT[key].append(value)
+            pass
+
     if utterance == "送到香港要多少錢":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["fees"] = True
-            resultDICT["location"].append(args[1])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     if utterance == "運費":
@@ -66,8 +75,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            resultDICT["fees"] = True
-            resultDICT["location"].append(args[8])
+            # write your code here
+            # resultDICT[key].append(value)
             pass
 
     return resultDICT
