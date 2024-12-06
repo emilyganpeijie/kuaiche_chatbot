@@ -7,7 +7,10 @@
     },
     "user_defined": {
         "as_Noun": [
+            "台灣Pay",
             "快遞",
+            "支付寶",
+            "貨到付款",
             "貨態",
             "貨物",
             "關稅"
@@ -45,7 +48,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?|<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>)?"
+            "pattern": "(?<!</FUNC_negation>)(<(ACTION_verb|VerbP)>(送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)?|<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)>)(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多</CLAUSE_HowQ>(<(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>)?"
         },
         "下單後多久會出貨": {
             "id": "c0ddef89-e91d-4dd1-89a5-2540a6d240df",
@@ -64,7 +67,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(等|久等|稍等|等候|等到|等待|等第|等級|候補|安排|待遇)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(等|等待)</(ACTION_verb|VerbP)>(<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>|<CLAUSE_WhenQ>[^<]+</CLAUSE_WhenQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>時候</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<FUNC_determiner>[^<]+</FUNC_determiner><FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10})"
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(訂單|貨單|肉乾|貨品|貨物)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(等|等待|送|配送|宅配|配送|運送)</(ACTION_verb|VerbP)>(<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>|<CLAUSE_WhenQ>[^<]+</CLAUSE_WhenQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>時候</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<FUNC_determiner>[^<]+</FUNC_determiner><FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10})"
         },
         "香港大概什麼時候會可以拿到": {
             "id": "8e08d94e-31f1-4774-8a52-afa8fa22ac34",
@@ -72,7 +75,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(拿到|到手|弄到|得到|達到|博取|博得|取得|套取|奪回|奪得)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)*(<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>|<CLAUSE_WhenQ>[^<]+</CLAUSE_WhenQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>時候</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<FUNC_determiner>[^<]+</FUNC_determiner><FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10})(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)*<(ACTION_verb|VerbP)>(拿到|出貨|到貨|到|送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>"
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)*(<CLAUSE_HowQ>多</CLAUSE_HowQ><(MODIFIER|ModifierP)>久</(MODIFIER|ModifierP)>|<CLAUSE_WhenQ>[^<]+</CLAUSE_WhenQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>時候</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<FUNC_determiner>[^<]+</FUNC_determiner><FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){1,10})(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)*<(ACTION_verb|VerbP)>(拿到|出貨|到貨|到|送到|送去|送達|寄到|寄達|配送|宅配)</(ACTION_verb|VerbP)>"
         }
     },
     "alias": {},

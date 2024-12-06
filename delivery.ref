@@ -7,7 +7,10 @@
     },
     "user_defined": {
         "as_Noun": [
+            "台灣Pay",
             "快遞",
+            "支付寶",
+            "貨到付款",
             "貨態",
             "貨物",
             "關稅"
@@ -73,7 +76,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查詢|徵詢|探查|探詢|查問|查找|查探|查明|查看|查究|查考)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態|貨物|包裹|商品|貨品|肉乾)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>(出貨|寄送|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)"
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>貨態</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨|貨物|包裹|商品|貨品|肉乾)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(出貨|寄送|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>))"
         },
         "美國的怎麼查詢貨態": {
             "id": "ccb7600f-035b-444a-a11a-2e46bc121b54",
