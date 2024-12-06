@@ -29,15 +29,13 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退貨|退下|退出|退回|退守|退票|退行|退還|回來|回去|回敬)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退|換|退換|退貨|退換貨|退掉|換掉|退錢)</(ACTION_verb|VerbP)>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退|換|退換|退貨|退換貨|退掉|換掉|退錢|退款)</(ACTION_verb|VerbP)>"
         },
-        "退錢": {
-            "id": "fee598c0-66d3-4c77-847a-9807ef67ee3e",
-            "pos": "<ACTION_verb>退錢</ACTION_verb>",
-            "lexy": [
-                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退錢|退款|退還|撤文|閉嘴|罰酒|剝蝦|交錢|給錢|付錢|認帳)</(ACTION_verb|VerbP)>"
-            ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>退錢</(ACTION_verb|VerbP)>"
+        "這個肉乾我不要": {
+            "id": "73eb29c3-7d16-48c9-a848-b29f552e7230",
+            "pos": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><ENTITY_nounHead>肉乾</ENTITY_nounHead><ENTITY_pronoun>我</ENTITY_pronoun><FUNC_negation>不要</FUNC_negation>",
+            "lexy": [],
+            "pattern": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase>?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_negation>[^<]+</FUNC_negation>)(<(ACTION_verb|VerbP)>(要|想要)</(ACTION_verb|VerbP)>)?"
         },
         "不想要這個肉乾了": {
             "id": "69bc622b-997a-4d58-a4e6-223391e4bda2",
@@ -45,7 +43,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想要|想拿|想買|需要|希望|試圖|想讓|願意|打算|試著|想)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>(想要)</(ACTION_verb|VerbP)>)?(<ENTITY_DetPhrase>這個</ENTITY_DetPhrase>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ASPECT>[^<]+</ASPECT>)?"
+            "pattern": "<FUNC_negation>[^<]+</FUNC_negation>(<(ACTION_verb|VerbP)>(要|想要)</(ACTION_verb|VerbP)>)?(<ENTITY_DetPhrase>這個</ENTITY_DetPhrase>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ASPECT>[^<]+</ASPECT>)?"
         }
     },
     "alias": {},
