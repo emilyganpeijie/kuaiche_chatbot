@@ -305,28 +305,10 @@ def testIntent():
     testLoki(inputLIST, ['delivery'])
     print("")
 
-    # region
-    print("[TEST] region")
-    inputLIST = ['可以送到香港']
-    testLoki(inputLIST, ['region'])
-    print("")
-
     # tariff
     print("[TEST] tariff")
     inputLIST = ['關稅','入境要另外付錢嗎']
     testLoki(inputLIST, ['tariff'])
-    print("")
-
-    # payment
-    print("[TEST] payment")
-    inputLIST = ['信用卡','付款方式','有ApplePay嗎','信用卡付款','支付可以用','可以怎麼付款','ApplePay可以用來付款']
-    testLoki(inputLIST, ['payment'])
-    print("")
-
-    # fees
-    print("[TEST] fees")
-    inputLIST = ['運費','送到香港要多少錢']
-    testLoki(inputLIST, ['fees'])
     print("")
 
     # return
@@ -341,32 +323,39 @@ def testIntent():
     testLoki(inputLIST, ['time'])
     print("")
 
+    # fees
+    print("[TEST] fees")
+    inputLIST = ['運費','寄到香港的費用','送到香港要多少錢']
+    testLoki(inputLIST, ['fees'])
+    print("")
+
+    # payment
+    print("[TEST] payment")
+    inputLIST = ['信用卡','付款方式','有ApplePay嗎','信用卡付款','支付可以用','可以怎麼付款','ApplePay可以用來付款']
+    testLoki(inputLIST, ['payment'])
+    print("")
+
+    # region
+    print("[TEST] region")
+    inputLIST = ['香港可以送嗎','香港寄得到嗎','可以送到香港嗎']
+    testLoki(inputLIST, ['region'])
+    print("")
+
 
 if __name__ == "__main__":
     from pprint import pprint
 
     # 測試所有意圖
-    #testIntent()
+    testIntent()
 
     # 測試其它句子
     filterLIST = []
     splitLIST = ["！", "，", "。", "？", "!", ",", "\n", "；", "\u3000", ";"]
     # 設定參考資料
     refDICT = { # value 必須為 list
-        "delivery": [],
-        "fees": [],
-        "payment": [],
-        "pMethod": "",
-        "region": [],
-        "return": [],
-        "tariff": [],
-        "time": [],
-        "location": ""
+        #"key": []
     }
-    #resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, refDICT=refDICT)                      # output => {"key": ["今天天氣"]}
-    #resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT) # output => {"key": ["今天天氣", "後天氣象"]}
-    #resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST=filterLIST, refDICT=refDICT)                # output => {"key": ["今天天氣", "後天氣象"]}
-    
-    inputSTR = "可以用ApplyPay付款嗎?"
-    resultDICT = execLoki(inputSTR, refDICT=refDICT)
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, refDICT=refDICT)                      # output => {"key": ["今天天氣"]}
+    resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT) # output => {"key": ["今天天氣", "後天氣象"]}
+    resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST=filterLIST, refDICT=refDICT)                # output => {"key": ["今天天氣", "後天氣象"]}
     pprint(resultDICT)
