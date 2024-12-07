@@ -11,8 +11,10 @@
             "快遞",
             "支付寶",
             "貨到付款",
+            "貨品",
             "貨態",
             "貨物",
+            "貨運",
             "關稅"
         ]
     },
@@ -32,10 +34,10 @@
             "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(退|換|退換|退貨|退換貨|退掉|換掉|退錢|退款)</(ACTION_verb|VerbP)>"
         },
         "這個肉乾我不要": {
-            "id": "73eb29c3-7d16-48c9-a848-b29f552e7230",
+            "id": "df9e798a-6092-4e4f-8d80-9549f76e1143",
             "pos": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase><ENTITY_nounHead>肉乾</ENTITY_nounHead><ENTITY_pronoun>我</ENTITY_pronoun><FUNC_negation>不要</FUNC_negation>",
             "lexy": [],
-            "pattern": "<ENTITY_DetPhrase>這個</ENTITY_DetPhrase>?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_negation>[^<]+</FUNC_negation>)(<(ACTION_verb|VerbP)>(要|想要)</(ACTION_verb|VerbP)>)?"
+            "pattern": "(<ENTITY_DetPhrase>[^<]+</ENTITY_DetPhrase>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(肉乾|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<FUNC_negation>[^<]+</FUNC_negation>"
         },
         "不想要這個肉乾了": {
             "id": "69bc622b-997a-4d58-a4e6-223391e4bda2",

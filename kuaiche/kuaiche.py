@@ -77,8 +77,8 @@ try:
     LOKI_KEY = accountInfo["loki_key"]
 except Exception as e:
     print("[ERROR] AccountInfo => {}".format(str(e)))
-    USERNAME = ""
-    LOKI_KEY = ""
+    USERNAME = "ivickie621@gmail.com"
+    LOKI_KEY = "PNzk2n3xgxnX!oBa=ln4ojcJ&GC-JZz"
 
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
