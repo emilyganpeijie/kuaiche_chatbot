@@ -57,8 +57,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[1])
             pass
 
     if utterance == "下星期可以拿到嗎":
@@ -66,8 +66,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
             pass
 
     if utterance == "到香港大概要等多久":
@@ -75,8 +74,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[1])
             pass
 
     if utterance == "多久會到":
@@ -84,8 +83,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
             pass
 
     if utterance == "多久能送到香港":
@@ -93,8 +91,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[24])
             pass
 
     if utterance == "甚麼時候會到貨":
@@ -102,8 +100,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[1])
             pass
 
     if utterance == "送到香港要多久":
@@ -111,8 +109,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[10])
             pass
 
     if utterance == "香港大概什麼時候會可以拿到":
@@ -120,8 +118,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
+            resultDICT["time"] = True
+            resultDICT["location"].append(args[1])
             pass
 
     return resultDICT
