@@ -17,6 +17,23 @@
         ]
     },
     "utterance": {
+        "運送國家": {
+            "id": "7eeaffc8-18ac-4f6f-acc0-e6f44c9bb0cb",
+            "pos": "<ACTION_verb>運送</ACTION_verb><ENTITY_noun>國家</ENTITY_noun>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(運送|押送|搬運|販運|輸送|輸運|運載|運輸|運銷|馱運|駁運)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)((<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>海外</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(運送|寄送|配送|宅配)</(ACTION_verb|VerbP)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(國家|地區)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)|(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>(運送|寄送|配送|宅配)</(ACTION_verb|VerbP)>)"
+        },
+        "配送到府": {
+            "id": "642918b1-36d3-4462-bb56-26b079fb29cb",
+            "pos": "<ACTION_verb>配送</ACTION_verb><ACTION_verb>到</ACTION_verb><ENTITY_nouny>府</ENTITY_nouny>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(配送|遞送|外送|進貨|運送|寄送|送貨|採買|冷藏|派送|到貨)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送|寄送|寄|配送|宅配|運送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>到</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>府</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
+        },
         "香港可以送嗎": {
             "id": "4e24c1fc-9c4e-43b7-a811-4120533c95e4",
             "pos": "<LOCATION>香港</LOCATION><MODAL>可以</MODAL><ACTION_verb>送</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
@@ -40,7 +57,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送|送到|送去|送達|寄送|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?((<LOCATION>([^<]+)</LOCATION>(<MODAL>[^<]+</MODAL>)?(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>|$))|(<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(地方|地點)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?))"
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送|送到|送去|送達|寄送|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?((<LOCATION>([^<]+)</LOCATION>(<MODAL>[^<]+</MODAL>)?(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>|$))|(<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(地方|地點)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?))|((<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(國家|海外國家)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
         }
     },
     "alias": {},

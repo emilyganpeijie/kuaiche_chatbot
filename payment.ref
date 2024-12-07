@@ -29,7 +29,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付出|付清|付現|付給|付費|付錢|償付|支付|給付|繳付)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付費|付錢|支付|結帳)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|工具)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付款|付費|付錢|支付|結帳)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(方式|工具|方法)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "有ApplePay嗎": {
             "id": "bb632940-7300-4108-a8dd-7020f572c10d",
