@@ -23,15 +23,38 @@
             "lexy": [],
             "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>關稅</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
-        "入境要另外付錢嗎": {
-            "id": "42ac0f80-ec07-49c6-bc4e-b49b0568cb30",
-            "pos": "<ACTION_verb>入境</ACTION_verb><ACTION_verb>要</ACTION_verb><MODIFIER>另外</MODIFIER><ACTION_verb>付錢</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+        "入境的話還會有需要另外付錢嗎": {
+            "id": "8ed58b96-df49-44d0-92c9-f4a2796b6cb0",
+            "pos": "<ACTION_verb>入境</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>話</ENTITY_nouny><FUNC_inner>還</FUNC_inner><MODAL>會</MODAL><ACTION_verb>有</ACTION_verb><ACTION_verb>需要</ACTION_verb><MODIFIER>另外</MODIFIER><ACTION_verb>付錢</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入境|出境|離境|抵港|檢疫|通關|過境|攜入|居留|入籍|登船)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付錢|交錢|付出|付款|付清|付現|付給|付費|付賬|償付|出錢)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款|付費)</(ACTION_verb|VerbP)><CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>"
+        },
+        "送到香港的話還會有要另外付錢嗎": {
+            "id": "b9a1bb82-dcc0-4418-9418-d088af9d4817",
+            "pos": "<ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION><FUNC_inner>的</FUNC_inner><ENTITY_nouny>話</ENTITY_nouny><FUNC_inner>還</FUNC_inner><MODAL>會</MODAL><ACTION_verb>有</ACTION_verb><ACTION_verb>要</ACTION_verb><MODIFIER>另外</MODIFIER><ACTION_verb>付錢</ACTION_verb><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(付錢|交錢|付出|付款|付清|付現|付給|付費|付賬|償付|出錢)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款|付費)</(ACTION_verb|VerbP)>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)><LOCATION>([^<])+</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?<(ACTION_verb|VerbP)>(付錢|收錢|繳交|交|繳付|繳費|繳錢|繳款|支付|付|付款|付費)</(ACTION_verb|VerbP)>"
+        },
+        "入境的話會有需要支付額外的費用嗎": {
+            "id": "34e02f85-65b7-4ea3-a7f2-f716aeed7980",
+            "pos": "<ACTION_verb>入境</ACTION_verb><FUNC_inner>的</FUNC_inner><ENTITY_nouny>話</ENTITY_nouny><MODAL>會</MODAL><ACTION_verb>有</ACTION_verb><ACTION_verb>需要</ACTION_verb><ACTION_verb>支付</ACTION_verb><MODIFIER>額外</MODIFIER><FUNC_inner>的</FUNC_inner><ENTITY_nounHead>費用</ENTITY_nounHead><CLAUSE_YesNoQ>嗎</CLAUSE_YesNoQ>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入境|出境|離境|抵港|檢疫|通關|過境|攜入|居留|入籍|登船)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(有|具有|兼有|存有|帶有|懷有|持有|擁有|有了|有著|保留)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(付|支付|付出|負擔)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用|金錢|錢|花費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         }
     },
     "alias": {},
