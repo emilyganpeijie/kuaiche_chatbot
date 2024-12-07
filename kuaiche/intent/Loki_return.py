@@ -57,35 +57,27 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
-            pass
+            resultDICT["return"] = True
 
     if utterance == "換貨":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
-            pass
+            resultDICT["return"] = True
 
     if utterance == "退貨":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
-            pass
+            resultDICT["return"] = True
 
     if utterance == "這個肉乾我不要":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
-            # write your code here
-            # resultDICT[key].append(value)
-            pass
+            resultDICT["return"] = True
 
     return resultDICT
