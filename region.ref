@@ -11,8 +11,10 @@
             "快遞",
             "支付寶",
             "貨到付款",
+            "貨品",
             "貨態",
             "貨物",
+            "貨運",
             "關稅"
         ]
     },
@@ -57,7 +59,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送|送到|送去|送達|寄送|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?((<LOCATION>([^<]+)</LOCATION>(<MODAL>[^<]+</MODAL>)?(<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>|$))|(<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(地方|地點)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?))|((<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(國家|海外國家)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
+            "pattern": "(<MODAL>[^<]+</MODAL>)?<(ACTION_verb|VerbP)>(送|送到|送去|送達|寄送|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?<LOCATION>([^<]+)</LOCATION>(<MODAL>[^<]+</MODAL>)?<CLAUSE_YesNoQ>[^<]+</CLAUSE_YesNoQ>|(<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(地方|地點)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?)|((<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(國家|海外國家)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
         }
     },
     "alias": {},
