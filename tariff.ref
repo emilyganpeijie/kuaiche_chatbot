@@ -11,8 +11,10 @@
             "快遞",
             "支付寶",
             "貨到付款",
+            "貨品",
             "貨態",
             "貨物",
+            "貨運",
             "關稅"
         ]
     },
@@ -54,7 +56,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(需要|想要|索要|要求|需求|想拿|想買|索求|索討|允許|願意)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(支付|付出|付款|付清|付現|付給|付費|付錢|償付|給付|繳付)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(付|支付|付出|負擔)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用|金錢|錢|花費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(入關|入境)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>有</(ACTION_verb|VerbP)>)?<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(付|支付|付出|負擔|繳交|交|繳付|繳|收)</(ACTION_verb|VerbP)>(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用|金錢|錢|花費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         }
     },
     "alias": {},
