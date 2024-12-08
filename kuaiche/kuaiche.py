@@ -66,7 +66,7 @@ CWD_PATH = str(Path.cwd())
 lokiIntentDICT = {}
 for modulePath in glob("{}/intent/Loki_*.py".format(BASE_PATH)):
     moduleNameSTR = Path(modulePath).stem[5:]
-    modulePathSTR = modulePath.replace(CWD_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
+    modulePathSTR = modulePath.replace(BASE_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
     globals()[moduleNameSTR] = import_module(modulePathSTR)
     lokiIntentDICT[moduleNameSTR] = globals()[moduleNameSTR]
 
@@ -77,8 +77,8 @@ try:
     LOKI_KEY = accountInfo["loki_key"]
 except Exception as e:
     print("[ERROR] AccountInfo => {}".format(str(e)))
-    USERNAME = "ivickie621@gmail.com"
-    LOKI_KEY = "PNzk2n3xgxnX!oBa=ln4ojcJ&GC-JZz"
+    USERNAME = ""
+    LOKI_KEY = ""
 
 # 意圖過濾器說明
 # INTENT_FILTER = []        => 比對全部的意圖 (預設)
