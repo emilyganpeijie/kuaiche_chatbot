@@ -11,9 +11,12 @@
             "快遞",
             "支付寶",
             "貨到付款",
+            "貨品",
             "貨態",
             "貨物",
-            "關稅"
+            "貨運",
+            "關稅",
+            "運費"
         ]
     },
     "utterance": {
@@ -29,7 +32,15 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(寄到|寄回|寄給|寄出|送到|寄來|送達|轉給|送交|送抵|寄送)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?<LOCATION>([^<]+)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>費用</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>([^<]+)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>費用</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "送到香港如何計費": {
+            "id": "ebcdc921-4e1b-4336-bbb8-17a86b3a366f",
+            "pos": "<ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION><CLAUSE_HowQ>如何</CLAUSE_HowQ><ENTITY_oov>計費</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>([^<]+)</LOCATION>(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>計費</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>計算</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用|運費|貨運費|貨運費用|郵寄費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
         },
         "送到香港要多少錢": {
             "id": "a26a6b26-c0bd-42d6-9b79-47a89e4223ee",
@@ -38,7 +49,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(支付|付|繳交|繳付|交付)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多少</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(錢|費用)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(支付|付|繳交|繳付|交付)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多少</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(錢|費用)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
         }
     },
     "alias": {},
