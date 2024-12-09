@@ -1,5 +1,5 @@
 {
-    "class_roap": {
+    "region": {
         "prompt": {
             "user": "你會參考上述資訊，針對{{UTTERANCE}}擬定五組可能的回覆。",
             "system": "你是快車肉乾海外客服 FAQ 聊天機器人",
