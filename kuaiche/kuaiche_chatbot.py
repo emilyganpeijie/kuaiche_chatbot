@@ -299,7 +299,7 @@ def testLoki(inputLIST, filterLIST):
         print(resultDICT["msg"])
 
 def testIntent():
-    # class_roap
+    # region
     print("[TEST] region")
     inputLIST = ['香港可以送嗎','香港寄得到嗎','可以送到香港嗎','可以運送到哪些國家','可以配送到府嗎']
     testLoki(inputLIST, ['region'])
