@@ -66,7 +66,7 @@ CWD_PATH = str(Path.cwd())
 lokiIntentDICT = {}
 for modulePath in glob("{}/intent/Loki_*.py".format(BASE_PATH)):
     moduleNameSTR = Path(modulePath).stem[5:]
-    modulePathSTR = modulePath.replace(cwd_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
+    modulePathSTR = modulePath.replace(CWD_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
     globals()[moduleNameSTR] = import_module(modulePathSTR)
     lokiIntentDICT[moduleNameSTR] = globals()[moduleNameSTR]
 
@@ -305,27 +305,15 @@ def testIntent():
     testLoki(inputLIST, ['delivery'])
     print("")
 
-    # tariff
-    print("[TEST] tariff")
-    inputLIST = ['關稅','入境的話還會有需要另外付錢嗎', '送到香港的話還會有要另外付錢嗎', '入境的話會有需要支付額外的費用嗎']
-    testLoki(inputLIST, ['tariff'])
-    print("")
-
-    # return
-    print("[TEST] return")
-    inputLIST = ['換貨','退貨','這個肉乾我不要','不想要這個肉乾了']
-    testLoki(inputLIST, ['return'])
-    print("")
-
-    # time
-    print("[TEST] time")
-    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','下星期可以拿到嗎', '到香港大概要等多久','香港大概什麼時候會可以拿到']
-    testLoki(inputLIST, ['time'])
+    # region
+    print("[TEST] region")
+    inputLIST = ['運送國家','配送到府','香港可以送嗎','香港寄得到嗎','可以送到香港嗎']
+    testLoki(inputLIST, ['region'])
     print("")
 
     # fees
     print("[TEST] fees")
-    inputLIST = ['運費','寄到香港的費用','送到香港如何計費', '送到香港要多少錢', '送到香港的話還會有要另外付錢嗎']
+    inputLIST = ['運費','寄到香港的費用','送到香港如何計費','送到香港要多少錢','送到香港的話還會有要另外付錢嗎']
     testLoki(inputLIST, ['fees'])
     print("")
 
@@ -335,10 +323,22 @@ def testIntent():
     testLoki(inputLIST, ['payment'])
     print("")
 
-    # region
-    print("[TEST] region")
-    inputLIST = ['運送國家', '配送到府', '香港可以送嗎','香港寄得到嗎','可以送到香港嗎']
-    testLoki(inputLIST, ['region'])
+    # time
+    print("[TEST] time")
+    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','下星期可以拿到嗎','到香港大概要等多久','香港大概什麼時候會可以拿到']
+    testLoki(inputLIST, ['time'])
+    print("")
+
+    # tariff
+    print("[TEST] tariff")
+    inputLIST = ['關稅','寄到香港的費用','送到香港如何計費','送到香港要多少錢','入境的話還會有需要另外付錢嗎','送到香港的話還會有要另外付錢嗎','入境的話會有需要支付額外的費用嗎']
+    testLoki(inputLIST, ['tariff'])
+    print("")
+
+    # return
+    print("[TEST] return")
+    inputLIST = ['換貨','退貨','這個肉乾我不要','不想要這個肉乾了']
+    testLoki(inputLIST, ['return'])
     print("")
 
 
@@ -372,5 +372,3 @@ if __name__ == "__main__":
     inputSTR = inputSTR.replace(" ","")
     resultDICT = execLoki(inputSTR, refDICT=refDICT)
     pprint(resultDICT)
-    
-    #宅配到新加坡要多久？

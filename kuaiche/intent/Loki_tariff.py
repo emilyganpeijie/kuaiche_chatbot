@@ -68,12 +68,39 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
             resultDICT["tariff"] = True
             pass
 
+    if utterance == "寄到香港的費用":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            resultDICT["tariff"] = True
+            resultDICT["location"].append(args[7])
+            pass
+
+    if utterance == "送到香港如何計費":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            resultDICT["tariff"] = True
+            resultDICT["location"].append(args[10])
+            pass
+
     if utterance == "送到香港的話還會有要另外付錢嗎":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
             resultDICT["source"] = "reply"
         else:
             resultDICT["tariff"] = True
+            pass
+
+    if utterance == "送到香港要多少錢":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            resultDICT["tariff"] = True
+            resultDICT["location"].append(args[8])
             pass
 
     if utterance == "關稅":

@@ -10,11 +10,13 @@
             "台灣Pay",
             "快遞",
             "支付寶",
+            "計費",
             "貨到付款",
             "貨品",
             "貨態",
             "貨物",
             "貨運",
+            "運費",
             "關稅"
         ]
     },
@@ -24,6 +26,31 @@
             "pos": "<UserDefined>關稅</UserDefined>",
             "lexy": [],
             "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>關稅</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "寄到香港的費用": {
+            "id": "a9bab580-2bf5-485b-a1fa-928fede2608b",
+            "pos": "<ACTION_verb>寄到</ACTION_verb><LOCATION>香港</LOCATION><FUNC_inner>的</FUNC_inner><ENTITY_nounHead>費用</ENTITY_nounHead>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(寄到|寄回|寄給|寄出|送到|寄來|送達|轉給|送交|送抵|寄送)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>([^<]+)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+        },
+        "送到香港如何計費": {
+            "id": "0a336d6f-2a6a-46c9-b1f5-6ca06f84379c",
+            "pos": "<ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION><CLAUSE_HowQ>如何</CLAUSE_HowQ><UserDefined>計費</UserDefined>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>([^<]+)</LOCATION>(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>計費</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<(ACTION_verb|VerbP)>計算</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費用|運費|貨運費|貨運費用|郵寄費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
+        },
+        "送到香港要多少錢": {
+            "id": "c5bbf2ba-bfdb-43b7-875b-a810c1cced21",
+            "pos": "<ACTION_verb>送到</ACTION_verb><LOCATION>香港</LOCATION><ACTION_verb>要</ACTION_verb><CLAUSE_HowQ>多少</CLAUSE_HowQ><ENTITY_oov>錢</ENTITY_oov>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(送到|帶到|送回|送入|送進|送去|送到了|帶回|帶到了|抬到|接回)</(ACTION_verb|VerbP)>",
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|送|送到|送去|送達|寄到|寄達|配送|宅配|運送|寄去|寄送)</(ACTION_verb|VerbP)>(<(ACTION_verb|VerbP)>(到|去)</(ACTION_verb|VerbP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<QUANTIFIER>[^<]+</QUANTIFIER>)?(<(ACTION_verb|VerbP)>要</(ACTION_verb|VerbP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<AUX>[^<]+</AUX>)?(<(ACTION_verb|VerbP)>(需要|要)</(ACTION_verb|VerbP)>)?(<(ACTION_verb|VerbP)>(支付|付|繳交|繳付|交付)</(ACTION_verb|VerbP)>)?<CLAUSE_HowQ>多少</CLAUSE_HowQ>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(錢|費用)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?"
         },
         "入境的話還會有需要另外付錢嗎": {
             "id": "8ed58b96-df49-44d0-92c9-f4a2796b6cb0",
