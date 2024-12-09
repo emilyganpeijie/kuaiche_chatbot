@@ -54,11 +54,11 @@ import os
 import re
 
 # Chatbot 模式
-CHATBOT_MODE = False
+CHATBOT_MODE = True
 try:
     from toolkit.LLM import callLLM
 except:
-    CHATBOT_MODE = False
+    CHATBOT_MODE = True
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 CWD_PATH = str(Path.cwd())
@@ -66,7 +66,7 @@ CWD_PATH = str(Path.cwd())
 lokiIntentDICT = {}
 for modulePath in glob("{}/intent/Loki_*.py".format(BASE_PATH)):
     moduleNameSTR = Path(modulePath).stem[5:]
-    modulePathSTR = modulePath.replace(BASE_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
+    modulePathSTR = modulePath.replace(cwd_PATH, "").replace(".py", "").replace("/", ".").replace("\\", ".")[1:]
     globals()[moduleNameSTR] = import_module(modulePathSTR)
     lokiIntentDICT[moduleNameSTR] = globals()[moduleNameSTR]
 
@@ -307,25 +307,25 @@ def testIntent():
 
     # tariff
     print("[TEST] tariff")
-    inputLIST = ['關稅','入境要另外付錢嗎']
+    inputLIST = ['關稅','入境的話還會有需要另外付錢嗎', '送到香港的話還會有要另外付錢嗎', '入境的話會有需要支付額外的費用嗎']
     testLoki(inputLIST, ['tariff'])
     print("")
 
     # return
     print("[TEST] return")
-    inputLIST = ['換貨','退貨','退錢','不想要這個肉乾了']
+    inputLIST = ['換貨','退貨','這個肉乾我不要','不想要這個肉乾了']
     testLoki(inputLIST, ['return'])
     print("")
 
     # time
     print("[TEST] time")
-    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','到香港大概要等多久','香港大概什麼時候會可以拿到']
+    inputLIST = ['多久會到','多久能送到香港','甚麼時候會到貨','送到香港要多久','下單後多久會出貨','下星期可以拿到嗎', '到香港大概要等多久','香港大概什麼時候會可以拿到']
     testLoki(inputLIST, ['time'])
     print("")
 
     # fees
     print("[TEST] fees")
-    inputLIST = ['運費','寄到香港的費用','送到香港要多少錢']
+    inputLIST = ['運費','寄到香港的費用','送到香港如何計費', '送到香港要多少錢', '送到香港的話還會有要另外付錢嗎']
     testLoki(inputLIST, ['fees'])
     print("")
 
@@ -337,7 +337,7 @@ def testIntent():
 
     # region
     print("[TEST] region")
-    inputLIST = ['香港可以送嗎','香港寄得到嗎','可以送到香港嗎']
+    inputLIST = ['運送國家', '配送到府', '香港可以送嗎','香港寄得到嗎','可以送到香港嗎']
     testLoki(inputLIST, ['region'])
     print("")
 
@@ -368,7 +368,9 @@ if __name__ == "__main__":
     #resultDICT = execLoki("今天天氣如何？後天氣象如何？", filterLIST=filterLIST, splitLIST=splitLIST, refDICT=refDICT) # output => {"key": ["今天天氣", "後天氣象"]}
     #resultDICT = execLoki(["今天天氣如何？", "後天氣象如何？"], filterLIST=filterLIST, refDICT=refDICT)                # output => {"key": ["今天天氣", "後天氣象"]}
     
-    inputSTR = "宅配到新加坡要多久？"
+    inputSTR = "可以送到哪些地方"
     inputSTR = inputSTR.replace(" ","")
     resultDICT = execLoki(inputSTR, refDICT=refDICT)
     pprint(resultDICT)
+    
+    #宅配到新加坡要多久？
