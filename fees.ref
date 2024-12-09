@@ -26,6 +26,15 @@
             "lexy": [],
             "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>話</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<MODAL>[^<]+</MODAL>)?(<(ACTION_verb|VerbP)>(要|需要)</(ACTION_verb|VerbP)>)?(<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(運費|貨運費|貨運費用|郵寄費)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|(<(ACTION_verb|VerbP)>(寄送|郵寄|運送)</(ACTION_verb|VerbP)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(費|費用)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))"
         },
+        "貨到付款的金額怎麼計算": {
+            "id": "14360a13-f8c7-40bc-bf49-2824f719584d",
+            "pos": "<UserDefined>貨到付款</UserDefined><FUNC_inner>的</FUNC_inner><ENTITY_noun>金額</ENTITY_noun><CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>計算</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(計算|估計|合算|推算|算數|算計|算起來|統計|總計|計數|計量)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>貨到付款</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>金額</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>計算</(ACTION_verb|VerbP)>"
+        },
+
         "寄到香港的費用": {
             "id": "11f5a2d1-468c-4b65-9b7b-25b0d56ab2da",
             "pos": "<ACTION_verb>寄到</ACTION_verb><LOCATION>香港</LOCATION><FUNC_inner>的</FUNC_inner><ENTITY_nounHead>費用</ENTITY_nounHead>",
