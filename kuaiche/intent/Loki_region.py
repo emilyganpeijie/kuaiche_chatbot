@@ -21,7 +21,7 @@ import json
 import os
 
 DEBUG = True
-CHATBOT_MODE = False
+CHATBOT_MODE = True
 INTENT_NAME = "region"
 
 userDefinedDICT = {}
