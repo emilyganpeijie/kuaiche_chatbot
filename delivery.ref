@@ -10,11 +10,13 @@
             "台灣Pay",
             "快遞",
             "支付寶",
+            "計費",
             "貨到付款",
             "貨品",
             "貨態",
             "貨物",
             "貨運",
+            "運費",
             "關稅"
         ]
     },
@@ -23,7 +25,7 @@
             "id": "4449f8de-64dc-41f1-96c5-26ca0d736a38",
             "pos": "<UserDefined>貨態</UserDefined>",
             "lexy": [],
-            "pattern": "(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(訂單|肉乾|貨品|貨物|商品|快遞|品項|貨|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(送貨|郵寄|運送|出貨|寄送|寄出|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)?((<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(狀態|資訊|情況)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))"
+            "pattern": "(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(訂單|肉乾|貨品|貨物|商品|快遞|品項|貨|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(送貨|郵寄|運送|出貨|寄送|寄出|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(狀態|資訊|情況)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))"
         },
         "哪家快遞": {
             "id": "f0a76ea4-8d25-47ed-9872-3ff5a126b4bd",
@@ -78,7 +80,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(查詢|徵詢|探查|探詢|查問|查找|查探|查明|查看|查究|查考)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(訂單|肉乾|貨品|貨物|商品|快遞|品項|貨|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(送貨|郵寄|運送|出貨|寄送|寄出|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)?((<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(狀態|資訊|情況)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))"
+            "pattern": "(<LOCATION>([^<]+)</LOCATION>)?(<TIME_(holiday|justtime|day|week|month|season|year|decade)>[^<]+</TIME_(holiday|justtime|day|week|month|season|year|decade)>){0,10}(<(MODIFIER|ModifierP)>[^<]+</(MODIFIER|ModifierP)>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(貨態)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(訂單|肉乾|貨品|貨物|商品|快遞|品項|貨|包裹)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?(<(ACTION_verb|VerbP)>(送貨|郵寄|運送|出貨|寄送|寄出|寄達|配送|宅配|到貨)</(ACTION_verb|VerbP)>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(狀態|資訊|情況)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>))"
         },
         "美國的怎麼查詢貨態": {
             "id": "ccb7600f-035b-444a-a11a-2e46bc121b54",
