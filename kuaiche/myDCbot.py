@@ -3,15 +3,16 @@
 
 import logging
 import discord
+import json
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from datetime import datetime
 from pprint import pprint
 from requests import post
 
-#from <your_loki_main_program> import execLoki
+from kuaiche import execLoki
 
-load_dotenv()
+#load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 
 
@@ -106,7 +107,12 @@ class BotClient(discord.Client):
                 resultDICT = getLokiResult(msgSTR)
                 logging.debug("######\nLoki 處理結果如下：")
                 logging.debug(resultDICT)
-                
+                if resultDICT["source"] == ["LLM_reply"]:
+                    assistantSTR = "抱歉，我的資料庫沒有相關的知識，以常識來猜，我會這麼回覆..."
+                    userSTR = msgSTR
+                    replySTR = llmCall(accountDICT["username"], assistantSTR, userSTR)
+                else:
+                    replySTR = resultDICT["response"][0]                
 
 
 
@@ -118,9 +124,11 @@ class BotClient(discord.Client):
 
 
 if __name__ == "__main__":
-    accountDICT = {"username":"ganpeijie3@gmail.com",
-                   "apikey":"",
-                   "discord_token": os.getenv("discord_token")
-                   }
+    with open("account.info", encoding="utf-8") as f: #讀取account.info
+            accountDICT = json.loads(f.read())    
+    #accountDICT = {"username":"ganpeijie3@gmail.com",
+                   #"apikey":"",
+                   #"discord_token": os.getenv("discord_token")
+                   #}
     client = BotClient(intents=discord.Intents.default())
     client.run(accountDICT["discord_token"])
