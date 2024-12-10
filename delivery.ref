@@ -33,6 +33,14 @@
             "lexy": [],
             "pattern": "(<FUNC_determiner>哪</FUNC_determiner><ENTITY_num>一</ENTITY_num><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<ENTITY_DetPhrase>哪一家</ENTITY_DetPhrase>|<CLAUSE_WhatQ>[^<]+</CLAUSE_WhatQ>|<CLAUSE_WhereQ>[^<]+</CLAUSE_WhereQ><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>|<FUNC_determiner>[^<]+</FUNC_determiner><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>家</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(宅配|快遞|貨運)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>公司</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)?|<(ACTION_verb|VerbP)>(送|送到|送去|送達|寄到|寄達|寄送|配送|宅配|運送)</(ACTION_verb|VerbP)>|<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(送|送到|送去|送達|寄到|寄達|寄送|配送|宅配|運送|送貨)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>)"
         },
+        "怎麼配送": {
+            "id": "b6230dcc-06e4-4ce1-b92a-3fe75855d783",
+            "pos": "<CLAUSE_HowQ>怎麼</CLAUSE_HowQ><ACTION_verb>配送</ACTION_verb>",
+            "lexy": [
+                "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(配送|遞送|外送|進貨|運送|寄送|送貨|採買|冷藏|派送|到貨)</(ACTION_verb|VerbP)>"
+            ],
+            "pattern": "<CLAUSE_HowQ>[^<]+</CLAUSE_HowQ><(ACTION_verb|VerbP)>(配送|寄送|宅配|送|運送)</(ACTION_verb|VerbP)>"
+        },
         "用什麼送": {
             "id": "97e55be8-e253-445c-bccd-0d329576d895",
             "pos": "<ACTION_verb>用</ACTION_verb><CLAUSE_WhatQ>什麼</CLAUSE_WhatQ><ACTION_verb>送</ACTION_verb>",
