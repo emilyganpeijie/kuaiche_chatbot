@@ -68,6 +68,14 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT, pattern=""):
         else:
             resultDICT["delivery"] = True
             pass
+        
+    if utterance == "怎麼配送":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+            resultDICT["source"] = "reply"
+        else:
+            resultDICT["delivery"] = True
+            pass
 
     if utterance == "怎麼查詢香港的貨態":
         if CHATBOT_MODE:
